@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <form action="" id="app">
+	  <input type="text">
+	  <button type="submit" v-on:click="buscaNome()"></button>
+  </form>
+  <table>
+	  <tr>
+		  <th>id</th>
+	  </tr>
+	  <tr>
+		  <th>name</th>
+	  </tr>
+	  <tr>
+		  <th>username</th>
+	  </tr>
+	  <tr>
+		  <th>email</th>
+	  </tr>
+  </table>
+
+  <script>
+	  	var app = new Vue({
+			el: '#app',
+			data: {
+				id: '',
+				name: '',
+				username: '',
+				email: ''
+			}
+		})
+
+  </script>
+</body>
+</html>

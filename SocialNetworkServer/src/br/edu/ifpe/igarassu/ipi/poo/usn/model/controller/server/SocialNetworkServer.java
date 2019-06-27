@@ -24,6 +24,7 @@ import br.edu.ifpe.igarassu.ipi.poo.usn.model.controller.server.user.ListUserHan
 import br.edu.ifpe.igarassu.ipi.poo.usn.model.controller.server.user.RemoveUserByIdHandler;
 import br.edu.ifpe.igarassu.ipi.poo.usn.model.controller.server.user.SearchByNameUserHandler;
 import br.edu.ifpe.igarassu.ipi.poo.usn.model.controller.server.user.UpdateUserByIdHandler;
+import br.edu.ifpe.igarassu.ipi.poo.usn.data.entity.exception.InvalidDataException;
 
 /**
  *
@@ -48,17 +49,23 @@ public class SocialNetworkServer {
 		server.createContext("/user/update", new UpdateUserByIdHandler(facade));
 		server.createContext("/user/search", new SearchByNameUserHandler(facade));
 		server.createContext("/user/list", new ListUserHandler(facade));
+		// server.createContext("/html/index", new ListUserHandler(facade));
 		server.setExecutor(null);
 
 		server.start();
 	}
 
 	private static void populateUsers(UserSocialNetworkFacade facade) {
-		facade.addUser(new User(0, "Carla", "312"));
-		facade.addUser(new User(1, "Carlos", "541"));
-		facade.addUser(new User(2, "Marcos", "451"));
-		facade.addUser(new User(3, "Joao", "123"));
-		facade.addUser(new User(4, "Joana", "171"));
+		try{
+			facade.addUser(new User(0, "Carla", "312", "dfdfsdf", "dfdsfsdfs"));
+			facade.addUser(new User(1, "Carlos", "541", "sfrassa", "dfdsfsdf"));
+			facade.addUser(new User(2, "Marcos", "451", "sdfsdfdsf", "sdsadasd"));
+			facade.addUser(new User(3, "Joao", "123", "sfsfdsad", "sdsadasd"));
+			facade.addUser(new User(4, "Joana", "171", "sfsfdsad", "sdsadasd"));
+		}
+		catch(InvalidDataException ex){
+			System.out.println(ex);
+		}
 	}
 
 }

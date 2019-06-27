@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - SocialNetworkServer",
+      "request": "launch",
+      "mainClass": "br.edu.ifpe.igarassu.ipi.poo.usn.model.controller.server.SocialNetworkServer",
+      "projectName": "SocialNetworkServer"
+    }
+  ]
+}

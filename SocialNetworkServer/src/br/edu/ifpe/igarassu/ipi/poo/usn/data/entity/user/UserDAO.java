@@ -56,5 +56,7 @@ public interface UserDAO {
 	 * @return a list of <code>Users</code> the contain the string <code>name</code> on their names, if there is no results on the search, the method will return an empty list.
 	 */
 	public List<User> searchByName(String name);
+
+	public void updateById(long id);
 	
 }

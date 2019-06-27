@@ -12,6 +12,7 @@
 package br.edu.ifpe.igarassu.ipi.poo.usn.data.entity.user;
 
 import br.edu.ifpe.igarassu.ipi.poo.usn.data.entity.Entity;
+import br.edu.ifpe.igarassu.ipi.poo.usn.data.entity.exception.InvalidDataException;
 
 /**
  * 
@@ -37,7 +38,7 @@ public class User extends Entity {
 	 * @param name the name of the user
 	 * @param password the password of the user
 	 */
-	public User(long id, String name, String password, String email, String username)  throws InvalidDataException{
+	public User(long id, String name, String password, String email, String username)throws InvalidDataException {
 		super(id);
 		this.setName(name);
 		this.setPassword(password);
